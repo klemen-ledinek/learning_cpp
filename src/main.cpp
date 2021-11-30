@@ -1,17 +1,17 @@
+#include "add.h"
 #include <iostream>
-#include "example2.cpp"
+
 //Macro 
 #define MY_NAME "Klemen"
 
 #define PRINT_DA
 
-int add(int x, int y);
 
 int main()
 {
     //int i = 1;    
     //std::cin >> i;
-    std::cout << "Wilde" << add(3,4) << '\n';
+    std::cout << "Wilde " << add(3, 4) << '\n';
     std::cout << "My name macro is " << MY_NAME << '\n';
 
 #ifdef PRINT_DA

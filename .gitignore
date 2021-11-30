@@ -2,7 +2,12 @@
 *.exe
 
 #TXT DATA - CHANGE
-*.txt
+*manual.txt
+*chapter.txt
 
 # Whole .vscode part
 .vscode
+*.code-workspace
+
+#build directory
+build
