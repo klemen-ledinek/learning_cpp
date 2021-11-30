@@ -4,6 +4,7 @@ project(cpp_learning VERSION 0.1.0)
 set(SOURCES
     src/main.cpp
     src/add.cpp
+    src/output.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

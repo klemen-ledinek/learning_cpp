@@ -1,4 +1,5 @@
 #include "add.h"
+#include "output.h"
 #include <iostream>
 
 //Macro 
@@ -26,6 +27,7 @@ int main()
     std::cout << "TEST if 0" << '\n';
 #endif // Until this point
 
+    display("Testiram output.cpp with pragma once");
     return 0;
 }
 
@@ -52,5 +54,10 @@ Common preprocessor directives:
     output text. Two basic types of macros: object-like macros and function-like macros
 - Conditional compilation       : Specify under what conditions one part of code will compile (#ifdef
     , #ifndef and #endif)  
+
+
+Header Guards
+- Conditional compilation directives.
+Namesto Header Guardsov se lahko uporabi #pragma once
 
 */
