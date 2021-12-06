@@ -47,6 +47,15 @@ int main()
     //C++11, ensures that const must be a compile-time constant
     constexpr double gravity = 9.8;
 
+    /*Conditional (arithmetic if) operator
+     *Operator	Symbol	Form	    Operation
+     *Conditional	?:	    c ? x : y	If c is nonzero (true) then evaluate x, otherwise evaluate y
+     */
+    int x = 1;
+    int y = 2;
+    int larger = (x < y) ? x : y;
+    
+
     return 0;
 }
 
@@ -187,4 +196,13 @@ Integer prefixes:
 
 printing std::hex, std::oct, std::dec
 std::bitset for bits..
+
+
+Operator	                        Symbol	Form	Operation
+Prefix increment (pre-increment)	++	    ++x	    Increment x, then return x
+Prefix decrement (pre-decrement)	––	    ––x	    Decrement x, then return x
+Postfix increment (post-increment)	++	    x++	    Copy x, then increment x, then return the copy
+Postfix decrement (post-decrement)	––	    x––	    Copy x, then decrement x, then return the copy
+
+Therefore Prefix is faster then postfix!
 */
