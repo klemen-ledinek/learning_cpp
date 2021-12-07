@@ -1,3 +1,10 @@
 #pragma once
+#include <string>
+#include <iostream>
 
-int add(int x, int y);
+
+namespace add
+{    
+    int add(int x, int y);
+    void display(std::string tekst);
+} // namespace add    

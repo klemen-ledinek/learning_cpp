@@ -1,6 +1,16 @@
 #include "add.h" 
 
-int add(int x, int y)
+namespace add
 {
-    return x+y;
-}
+
+    int add(int x, int y)
+    {
+        return x+y;
+    }
+
+    void display(std::string tekst)
+    {
+        std::cout << tekst;
+    }
+
+} // namespace add

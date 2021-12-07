@@ -8,14 +8,22 @@
 
 #define PRINT_DA
 
+//Global value for whole file
+int g_x = 3;
 
 int main()
 {
     //int i = 1;    
     //std::cin >> i;
-    std::cout << "Wilde " << add(3, 4) << '\n';
-    std::cout << "My name macro is " << MY_NAME << '\n';
 
+    //namespace active = add::display; this should work???
+    std::cout << "Wilde " << add::add(3, 4) << '\n';
+    std::cout << "My name macro is " << MY_NAME << '\n';
+    
+    int g_x = 1;
+    std::cout << "Internal value g_x: " << g_x << '\n';
+    //Direct access to global with ::
+    std::cout << "Global value g_x: " << (::g_x) << '\n';
 #ifdef PRINT_DA
     std::cout << "Print DA, ce je ta definiran \n";
 #endif
@@ -28,17 +36,19 @@ int main()
     std::cout << "TEST if 0" << '\n';
 #endif // Until this point
 
-    display("Testiram output.cpp with pragma once\n");
+
+    //outpuz::display because we are using namespaces.. display is used in add.cpp also
+    output::display("Testiram output.cpp with pragma once\n");
     std::cout << "Size of bool:\t\t" << sizeof(bool) << " bytes\n";
 
     std::cout << "Example of static cast of number 5.5 to integer: " << static_cast<int>(5.5) << '\n';
 
     //std::cin only reads up uintil whitespace. Use std::getline
-    display("Enter your name: \n");
+    output::display("Enter your name: \n");
     std::string fullName{};
     //The std::ws input maniuplator thells std::cin to ignore any leading whitespace
     std::getline(std::cin >> std::ws, fullName);
-    display("You entered: ");
+    output::display("You entered: ");
     std::cout << fullName;
 
     //Const must be initialized
@@ -205,4 +215,6 @@ Postfix increment (post-increment)	++	    x++	    Copy x, then increment x, then
 Postfix decrement (post-decrement)	––	    x––	    Copy x, then decrement x, then return the copy
 
 Therefore Prefix is faster then postfix!
+
+Bit manipulation is one of the few times, where you should use unsigned integers
 */

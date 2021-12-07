@@ -1,4 +1,6 @@
 #pragma once
 #include <string>
-
-void display(std::string tekst);
+namespace output
+{
+    void display(std::string tekst);
+} // namespace output

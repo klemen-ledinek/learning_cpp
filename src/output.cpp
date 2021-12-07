@@ -1,6 +1,11 @@
 #include "output.h"
 #include <iostream>
-void display(std::string tekst)
+
+namespace output
 {
-    std::cout << tekst;
-}
+    void display(std::string tekst)
+    {
+        std::cout << tekst;
+    }
+
+} // namespace output
